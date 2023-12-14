@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #FFFFFF;
+}
+
+
+
+#home{
+    margin-top: -20px;
+    height: 50wh;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+#navbar{
+    background-color: #007BFF;
+    color: white;
+    padding: 35px 0;
+    text-align: center;
+    margin: 0px 0px;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
+    /* ... other styles ... */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: font-weight 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+    text-underline-offset: 10px;
+    color:#FFEB3B;
+}
+
+.picture_text_1 ul li {
+    margin: 10px 0px;
+}
+
+#highlight {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2rem;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFEB3B;
+
+}
+
+#highlight_1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2rem;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFEB3B;
+
+}
+
+#cleaning_lady {
+    display: flex; /* Aligns items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 30px; /* Adds space between image and text */
+    width: fit-content; /* Adjusts width to fit its contents */
+    margin: 0 auto; /* Centers the container horizontally */
+    justify-content: flex-start; /* Aligns items to the start of the container */
+    padding: 20px 0px;
+    
+}
+
+.picture_text_1 h2{
+    padding-top: 20px;
+}
+
+img {   
+    max-width: 700px; /* Adjust this value as needed */
+    width: 50%;
+    height: auto; /* Maintains the aspect ratio */
+    margin: 0px;
+}
+
+.headline_2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2rem;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+}
+
+.picture_text_1 {
+    font-size: 1.2rem;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: left;
+    width: 40%;
+    max-width: 600px;
+    margin: 0px;
+}
+
+.picture_text_2 {
+    font-size: 1rem;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: left;
+    width: 40%;
+    max-width: 500px;
+    margin: 0px;
+}
+
+#about{
+    background-color:  #007BFF ;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 5px 5px;
+}
+
+.icon_div {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    gap: 100px; /* Adjust the gap as needed */
+}
+
+.img_icon {
+    /* You can set a specific width and height for the icons */
+    width: 200px; /* Example size, adjust as needed */
+    height: 200px; /* Example size, adjust as needed */
+}
+
+.picture_text {
+    max-width: 600px; /* Adjust the maximum width of the text as needed */
+}
+
+#contact {
+    background-color: #cce7fe;
+    padding: 50px 10%;
+    text-align: center;
+    color: #333333;
+}
+
+.headline_3{
+    color: #333333;
+}
+
+.contact-container {
+    display: flex; /* Aligns items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 100px; /* Adds space between image and text */
+    width: fit-content; /* Adjusts width to fit its contents */
+    margin: 0 auto; /* Centers the container horizontally */
+    justify-content: flex-start; /* Aligns items to the start of the container */
+}
+
+.contact-form {
+    width: 50%;
+    max-width: 500px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 375px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+
+}
+
+.contact-form button {
+    width: 400px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info {
+    width: 50%;
+    max-width: 500px;
+    text-align: left;
+    font-size: 1.2rem;
+    margin-top: -20px;
+}
+
+.headline_3{
+    font-size: 2rem;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .img_icon {
+    /* You can set a specific width and height for the icons */
+    width: 160px; /* Example size, adjust as needed */
+    height: 160px; /* Example size, adjust as needed */
+    margin-top: 0px;
+    }   
+
+   
+    .icon_div {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    gap: 10px; /* Adjust the gap as needed */
+
+    }
+
+    #cleaning_lady {
+    display: flex; /* Aligns items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 15px; /* Adds space between image and text */
+    margin: 0 auto; /* Centers the container horizontally */
+    overflow: auto;
+    }
+    
+    #cleaning_lady_picture{
+    height: auto; /* Maintains the aspect ratio */
+    margin-left: 0px;
+    transform: scale(1.6);
+    margin-top: 0px;
+    flex-grow: 1;
+    }
+
+    #home{
+    display: flex;
+    margin-top: 0px;
+    background-color: #FFFFFF;
+    width: 100%;
+    }
+
+
+    #about{
+    background-color:  #007BFF ;
+    width: 100%;
+    height: 70%;
+    color: white;
+    padding: 5px 5px;
+
+    }
+
+    .picture_text_2 h2 {
+    font-size: 1rem;
+    width: 70%;
+    margin: 0px;
+    }
+
+   
+    .picture_text_2 p {
+    font-size: 0.65rem;
+    }
+
+    .picture_text_1{
+        flex-grow: 2;
+        font-size: 1rem;
+    }
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .contact-form, .contact-info {
+        width: 100%;
+
+    }
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align the items */
+        justify-content: center; /* Center along the main axis */
+        margin-top: -45px;
+    }
+
+    .contact-info p {
+        margin: 7px 0px;
+     }
+}
+    
