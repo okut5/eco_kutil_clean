@@ -43,7 +43,7 @@
     <section id="contact">
         <h2 class="headline_3">Kontaktujte nás</h2>
         <div class="contact-container">
-            <form action="sendEmail.php" method="post" class="contact-form">
+            <form action="http://localhost:3000/sendEmail" method="post" class="contact-form">
                 <input type="text" name="name" placeholder="Jméno" required>
                 <input type="email" name="email"  placeholder="E-mail" required>
                 <textarea name="message" placeholder="Vaše zpráva"></textarea>
@@ -110,25 +110,36 @@
         <p>© 2023 Váš Čistící Servis</p>
     </footer>
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('form').addEventListener('submit', function (e) {
-            e.preventDefault();
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
 
-            const formData = new FormData(this);
-            fetch('sendEmail.php', {
-            method: 'POST',
-            body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-            alert('Email sent successfully');
-            console.log(data);
-            })
-            .catch(error => {
-            alert('Error sending email');
-            console.error(error);
+            burger.addEventListener('click', () => {
+                //Toggle Nav
+                nav.classList.toggle('nav-active');
+
+                //Animate Links
+                navLinks.forEach((link, index) => {
+                    if(link.style.animation) {
+                        link.style.animation = ''
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                    }
+                });
+                //Burger Animation
+                burger.classList.toggle('toggle');
             });
-         });
+        }
+        navSlide();
+
+        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+            const name = document.querySelector('input[name="name"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            if (name === '' || email === '') {
+            event.preventDefault();
+            alert('Name and email are required!');
+        }
         });
 
     </script>

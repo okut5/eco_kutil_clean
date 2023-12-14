@@ -1,0 +1,29 @@
+{
+  "name": "eco_kutil_clean",
+  "version": "1.0.0",
+  "description": " am trying to build website for my cleaning service in node.js",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okut5/eco_kutil_clean.git"
+  },
+  "keywords": [
+    "cleaningservice",
+    "website",
+    "dynamic",
+    "emailnotif"
+  ],
+  "author": "Ondrej Kutil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/okut5/eco_kutil_clean/issues"
+  },
+  "homepage": "https://github.com/okut5/eco_kutil_clean#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7"
+  }
+}
