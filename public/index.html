@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Váš Čistící Servis</title>
-    <link rel="stylesheet" href="styles_4_ai.css">
+    <link href="css/styles_4_ai.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -43,12 +43,13 @@
     <section id="contact">
         <h2 class="headline_3">Kontaktujte nás</h2>
         <div class="contact-container">
-            <form action="http://localhost:3000/sendEmail" method="post" class="contact-form">
+            <form action="http://localhost:3000/sendEmail" method="post" class="contact-form" id="form_id">
                 <input type="text" name="name" placeholder="Jméno" required>
                 <input type="email" name="email"  placeholder="E-mail" required>
                 <textarea name="message" placeholder="Vaše zpráva"></textarea>
                 <button type="submit">Odeslat</button>
             </form>
+            
             <div class="contact-info">
                 <h3>Kontaktní informace</h3>
                 <p><strong>Adresa:</strong> Vaše adresa 123, Město, PSČ</p>
@@ -56,6 +57,7 @@
                 <p><strong>E-mail:</strong> info@vascisticiservis.cz</p>
             </div>
         </div>
+        <div id="messagerea" style="display:none; color:green;">Sent Successfully!</div>
     </section>
     
 
@@ -110,28 +112,6 @@
         <p>© 2023 Váš Čistící Servis</p>
     </footer>
     <script>
-        const navSlide = () => {
-            const burger = document.querySelector('.burger');
-            const nav = document.querySelector('.nav-links');
-            const navLinks = document.querySelectorAll('.nav-links li');
-
-            burger.addEventListener('click', () => {
-                //Toggle Nav
-                nav.classList.toggle('nav-active');
-
-                //Animate Links
-                navLinks.forEach((link, index) => {
-                    if(link.style.animation) {
-                        link.style.animation = ''
-                    } else {
-                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-                    }
-                });
-                //Burger Animation
-                burger.classList.toggle('toggle');
-            });
-        }
-        navSlide();
 
         document.querySelector('.contact-form').addEventListener('submit', function(event) {
             const name = document.querySelector('input[name="name"]').value;
@@ -141,6 +121,14 @@
             alert('Name and email are required!');
         }
         });
+
+       
+        document.getElementById('form_id').onsubmit = function(event) {
+            document.getElementById('messageArea').style.display = 'block'; // Show the message
+            // You can add more code here to handle the form submission, like an AJAX request
+        };
+
+
 
     </script>
 </body>

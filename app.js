@@ -3,6 +3,14 @@ const app = express();
 
 // Middleware to parse request body
 app.use(express.urlencoded({ extended: true }));
+// Example of a root route
+
+// Serve static files (e.g., HTML, CSS, JS) from a 'public' directory
+app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+    res.send('Welcome to my website!');
+});
 
 // Define routes here
 
@@ -12,24 +20,22 @@ app.listen(3000, () => {
 });
 
 const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
-
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/sendEmail', (req, res) => {
     const { name, email, message } = req.body;
 
     let transporter = nodemailer.createTransport({
-        service: 'gmail', // or your email provider
+        service: 'gmail',
         auth: {
-            user: 'youremail@gmail.com', // your email
-            pass: 'yourpassword' // your email password
+            user: 'ass4shift@gmail.com', // Your Gmail address
+            pass: 'vvhg udkn sbhe stgx'      // Your App Password or regular password
         }
     });
+    
 
     let mailOptions = {
-        from: 'youremail@gmail.com',
-        to: 'recipientemail@example.com', // recipient email
+        from: 'ass4shift@gmail.com',
+        to: 'ass4shift@gmail.com', // recipient email
         subject: `New Contact Request from ${name}`,
         text: `You have received a new message from ${name} (${email}): ${message}`
     };

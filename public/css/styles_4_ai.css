@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+@keyframes fadeInAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 * {
     scroll-behavior: smooth;
 }
@@ -132,6 +137,13 @@ img {
     width: 40%;
     max-width: 500px;
     margin: 0px;
+}
+
+#messageArea {
+    opacity: 0; /* Start with the div invisible */
+    animation: fadeInAnimation ease 3s; /* Apply the animation */
+    animation-iteration-count: 1; /* Run only once */
+    animation-fill-mode: forwards; /* Retain the style values set by the last keyframe */
 }
 
 #about{
