@@ -234,6 +234,12 @@ img {
 }
 
 
+address {
+    padding-top: 15px;
+    text-align: center;
+    background-color: #cce7fe;
+}
+
 @media screen and (max-width: 800px) {
 
     .img_icon {
