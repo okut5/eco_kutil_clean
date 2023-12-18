@@ -44,10 +44,11 @@
         <h2 class="headline_3">Kontaktujte nás</h2>
         <div class="contact-container">
             <form action="http://localhost:3000/sendEmail" method="post" class="contact-form" id="form_id">
-                <input type="text" name="name" placeholder="Jméno" required>
-                <input type="email" name="email"  placeholder="E-mail" required>
-                <textarea name="message" placeholder="Vaše zpráva"></textarea>
-                <button type="submit">Odeslat</button>
+                <input id="nameId" type="text" name="name" placeholder="Jméno" required>
+                <input id="emailId" type="email" name="email"  placeholder="E-mail" required>
+                <textarea id="messageId" name="message" placeholder="Vaše zpráva"></textarea>
+                <button id="submitButton" type="submit">Odeslat</button>
+
             </form>
             
             <div class="contact-info">
@@ -107,7 +108,7 @@
             <br />
             </address>
         </footer>
-    </section>
+    
     <script>
 
         document.querySelector('.contact-form').addEventListener('submit', function(event) {

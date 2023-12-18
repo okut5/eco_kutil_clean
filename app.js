@@ -46,7 +46,7 @@ app.post('/sendEmail', (req, res) => {
             res.send('error'); // if error occurs send error as response
         } else {
             console.log('Email sent: ' + info.response);
-            res.send('Sent Successfully'); // if email sent successfully send Sent Successfully as response
+            res.sendFile(__dirname + '/public/successResponse.html'); // Send HTML file on success
         }
     });
 });
