@@ -243,7 +243,26 @@ img {
 address {
     padding-top: 15px;
     text-align: center;
-    background-color: #cce7fe;
+    background-color: #34495e;
+    color: white;
+}
+
+address a {
+    color: white;
+    text-decoration: none;
+}
+address a:hover {
+    text-decoration: underline;
+    color: #FFEB3B;
+}
+
+.contact-info p a {
+    color: #333333;
+    text-decoration: none;
+ }
+.contact-info p a:hover {
+    text-decoration: underline;
+    color: #0056b3;
 }
 
 @media screen and (max-width: 800px) {
