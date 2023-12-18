@@ -110,8 +110,8 @@ img {
 }
 
 .headline_2{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 15px;
     text-align: center;
     font-size: 2rem;
     color: #333333;
@@ -139,6 +139,12 @@ img {
     margin: 0px;
 }
 
+.picture_text_2 h2 {
+    font-size: 1.1rem;
+    margin: 0px;
+    padding: 5px;
+}
+
 #messageArea {
     opacity: 0; /* Start with the div invisible */
     animation: fadeInAnimation ease 3s; /* Apply the animation */
@@ -157,13 +163,13 @@ img {
 .icon_div {
     display: flex;
     justify-content: center; /* Centers the content horizontally */
-    gap: 100px; /* Adjust the gap as needed */
+    gap: 10px; /* Adjust the gap as needed */
 }
 
 .img_icon {
     /* You can set a specific width and height for the icons */
-    width: 200px; /* Example size, adjust as needed */
-    height: 200px; /* Example size, adjust as needed */
+    width: 150px; /* Example size, adjust as needed */
+    height: 150px; /* Example size, adjust as needed */
 }
 
 .picture_text {
@@ -196,7 +202,7 @@ img {
 }
 
 .contact-form input, .contact-form textarea {
-    width: 375px;
+    width: 400px;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #007BFF;
@@ -205,7 +211,7 @@ img {
 }
 
 .contact-form button {
-    width: 400px;
+    width: 425px;
     padding: 10px;
     background-color: #007BFF;
     color: white;
@@ -253,7 +259,7 @@ address {
     .icon_div {
     display: flex;
     justify-content: center; /* Centers the content horizontally */
-    gap: 10px; /* Adjust the gap as needed */
+    gap: 3px; /* Adjust the gap as needed */
 
     }
 
@@ -294,6 +300,7 @@ address {
     font-size: 1rem;
     width: 70%;
     margin: 0px;
+    padding: 0px;
     }
 
    
@@ -326,5 +333,25 @@ address {
     .contact-info p {
         margin: 7px 0px;
      }
+
+     .contact-form input, .contact-form textarea {
+        width: 300px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #007BFF;
+        border-radius: 5px;
+    
+    }
+    
+    .contact-form button {
+        width: 325px;
+        padding: 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
 }
     
