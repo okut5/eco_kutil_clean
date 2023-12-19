@@ -24,17 +24,18 @@ body {
     background-color: #FFFFFF;
     width: 100%;
 }
-/*beginiong of div class container */
+/*beginiong of div class container for HOME */
 
 .container {
     display: flex;
     flex-direction: column; /* Align children vertically */
     align-items: center; /* Horizontal center alignment for children */
     justify-content: top; /* Vertical center alignment for children */
-    height: 30vh;
+    height: fit-content;
     width: auto;
-    margin-top: -70px;
+    margin-top: 0px;
     background-color: #ffffff;
+    margin-top: -70px;
 
   }
   
@@ -59,8 +60,35 @@ body {
     animation-delay: 0.5s;
   }
 
-/*end of div class container */
+/*end of div class container directly under home */
 
+/*Beggening of div class container directly under PRICES */
+#div_prices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    background-color:#007BFF;
+    padding: 50px 0px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    max-width: 1200px;
+    color: white;
+    justify-content: space-start; /* Aligns children side by side */
+    gap: 20px;
+}
+
+.headline_4{
+    color: #333333;
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+
+/*END of div class container directly under PRICES */
 #navbar{
     background-color: #007BFF;
     color: white;
@@ -192,11 +220,13 @@ img {
 }
 
 #about{
-    background-color:  #cce7fe;;
+    background-color:  #ffffff;
     width: 100%;
     height: 100%;
     color: white;
     padding: 5px 5px;
+    margin-top: 20px;
+    margin-bottom: -70px;
 }
 
 .icon_div {
@@ -280,6 +310,7 @@ img {
 
 
 address {
+    margin-top: -5px;
     padding-top: 15px;
     text-align: center;
     background-color: #007BFF;
@@ -306,6 +337,29 @@ address a:hover {
 
 
 @media screen and (max-width: 800px) {
+
+    /*Beggening of div class container directly under PRICES */
+#div_prices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #007BFF;
+    padding: 30px 0px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    max-width: 1200px;
+    width:90%;
+}
+
+
+
+
+
+/*END of div class container directly under PRICES */
 
     .img_icon {
     /* You can set a specific width and height for the icons */
@@ -347,11 +401,13 @@ address a:hover {
 
 
     #about{
-    background-color:  #007BFF ;
+    background-color:  #ffffff;
     width: 100%;
     height: 70%;
     color: white;
     padding: 5px 5px;
+    margin-top: 20px;
+    margin-bottom: -70px;
 
     }
 
@@ -433,6 +489,18 @@ address a:hover {
         animation-name: zoomInDown; /* Use any Animate.css animation name here */
         animation-duration: 1s;
         animation-delay: 0.5s;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column; /* Align children vertically */
+        align-items: center; /* Horizontal center alignment for children */
+        justify-content: top; /* Vertical center alignment for children */
+        height: fit-content;
+        width: auto;
+        margin-top: -70px;
+        background-color: #ffffff;
+    
       }
 }
     
