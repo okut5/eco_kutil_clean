@@ -1,41 +1,31 @@
 const express = require('express');
 const app = express();
+const nodemailer = require('nodemailer');
 
 // Middleware to parse request body
 app.use(express.urlencoded({ extended: true }));
-// Example of a root route
-
-// Serve static files (e.g., HTML, CSS, JS) from a 'public' directory
+// Serve static files from 'public' directory
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.send('Welcome to my website!');
 });
 
-// Define routes here
-
-// Start the server
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-});
-
-const nodemailer = require('nodemailer');
-
+// Nodemailer setup and route
 app.post('/sendEmail', (req, res) => {
     const { name, email, message } = req.body;
 
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'ass4shift@gmail.com', // Your Gmail address
-            pass: 'vvhg udkn sbhe stgx'      // Your App Password or regular password
+            user: process.env.EMAIL, // Use environment variable for Gmail address
+            pass: process.env.PASSWORD // Use environment variable for password or app password
         }
     });
-    
 
     let mailOptions = {
-        from: 'ass4shift@gmail.com',
-        to: 'ass4shift@gmail.com', // recipient email
+        from: process.env.EMAIL,
+        to: process.env.EMAIL, // recipient email
         subject: `New Contact Request from ${name}`,
         text: `You have received a new message from ${name} (${email}): ${message}`
     };
@@ -43,10 +33,16 @@ app.post('/sendEmail', (req, res) => {
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.log(error);
-            res.send('error'); // if error occurs send error as response
+            res.send('error');
         } else {
             console.log('Email sent: ' + info.response);
-            res.sendFile(__dirname + '/public/successResponse.html'); // Send HTML file on success
+            res.sendFile(__dirname + '/public/successResponse.html');
         }
     });
+});
+
+// Start server with dynamic port
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
