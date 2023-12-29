@@ -11,20 +11,20 @@
 <body>
     <header>
         <nav id="navbar">
-            <h1 id="highlight">EcoKutil Cleaning Experts</h1>
+            <h1 id="highlight"> <a href="#home"></a>EcoKutil Cleaning Experts</h1>
             <ul>   
                 <li><a href="#home">Domů</a></li>
                 <li><a href="#services">Služby</a></li>
-                <li><a href="prices">Ceny</a></li>
+                <li><a href="#prices">Ceny</a></li>
                 <li><a href="#contact">Kontakt</a></li>
-                <li><a href="#about">Naše hodnoty</a></li>
+                <li><a href="#about">Hodnoty</a></li>
                 
             </ul>
         </nav>
     </header>
     
     <section id="home">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#007BFF" fill-opacity="1" d="M0,192L60,170.7C120,149,240,107,360,80C480,53,600,43,720,37.3C840,32,960,32,1080,42.7C1200,53,1320,75,1380,85.3L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+        <svg id="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#007BFF" fill-opacity="1" d="M0,192L60,170.7C120,149,240,107,360,80C480,53,600,43,720,37.3C840,32,960,32,1080,42.7C1200,53,1320,75,1380,85.3L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
     <div class="container">
         <h1>Úklid kancelářských prostor</h1>
         <h2 class="div_2" >Nabízíme úklid všech druhů kancelářských prostor</h2> 
@@ -35,10 +35,37 @@
         <h2 class="headline_4">Ceny</h2>
     <div id="div_prices">
         <div id="div_prices_1">
-            <p>This is the first paragraph. This is the first paragraph. This is the first paragraph. This is the first paragraph. This is the first paragraph.</p>
+            <label for="numberInput">Vložte počet m² Vaší kanceláře:</label>
+            <textarea placeholder="číslo" id="numberInput"></textarea>
+            <br><br>
+
+            <button onclick="calculateComplexOperation()">Vypočítat</button>
+            <br><br>
+        
+            <label for="result">Přibližný odhat ceny:</label>
+            <input type="text" id="result" readonly>
+        
+            
+            
         </div>
         <div id="div_prices_2">
-            <p>This is the second paragraph. This is the first paragraph. This is the first paragraph. This is the first paragraph. This is the first paragraph.</p>
+            <table>
+                <tr>
+                  <th>Služby</th>
+                  <th>Cena</th>
+                </tr>
+                <tr>
+                  <td>Cena za m²</td>
+                  <td>3 Kč</td>
+                </tr>
+                <tr>
+                  <td>Cena za 1 hodinu</td>
+                  <td>150 Kč</td>
+                </tr>
+                <tr>
+                  <td>Odhad rychlosti - kolik metrů za hodinu </td>
+                  <td>20 m²/ hodinu</td>
+              </table>
         </div>
     </div>
     </section>
@@ -64,6 +91,7 @@
             </div>
         </div>
     </section>
+
 
 
     <section id="contact">
@@ -145,9 +173,29 @@
 
        
         document.getElementById('form_id').onsubmit = function(event) {
-            document.getElementById('messageArea').style.display = 'block'; // Show the message
-            // You can add more code here to handle the form submission, like an AJAX request
+            event.preventDefault(); // Prevent the default form submission behavior
+
+             calculateComplexOperation(); // Call the function to calculate and display the result
+
+             document.getElementById('messageArea').style.display = 'block'; // Show the message
+
+            // Add any additional code for form submission, like AJAX requests, here
         };
+
+            function calculateComplexOperation() {
+            var number = document.getElementById("numberInput").value;
+            number = parseFloat(number); // Make sure to parse the input as a number
+
+            if (!isNaN(number)) { // Check if the input is a valid number
+            var multiplied = number * 3;
+            var result = multiplied + (multiplied * 2.5); // performing (x*3)+((x*3)*2.5)
+            document.getElementById("result").value = result;
+            } else {
+            alert("Prosím vložte číselnou hodnotu!"); // Alert or handle invalid input
+            }
+            }
+
+
 
 
 

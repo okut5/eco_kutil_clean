@@ -33,9 +33,8 @@ body {
     justify-content: top; /* Vertical center alignment for children */
     height: fit-content;
     width: auto;
-    margin-top: 0px;
     background-color: #ffffff;
-    margin-top: -70px;
+    margin-top: -110px;
 
   }
   
@@ -65,28 +64,130 @@ body {
 /*Beggening of div class container directly under PRICES */
 #div_prices {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: stretch; /* Centers items vertically */
+    justify-content: center; /* Aligns items to the center of the container */
+    flex-direction: row;
+    gap: 0px;
     border-radius: 15px;
-    background-color:#007BFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* A subtle shadow to lift the container */
+    background-color: #cce7fe;
     padding: 50px 0px;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
     max-width: 1200px;
-    color: white;
-    justify-content: space-start; /* Aligns children side by side */
-    gap: 20px;
+    color: black;
+  
 }
 
+#div_prices_1 {
+    max-width: 400px; /* Set max width for the container */
+    margin: auto; /* Center the container */
+    padding: 20px; /* Add some padding around the inside of the container */
+    background-color: #f9f9f9; /* Light grey background */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* A subtle shadow to lift the container */
+    font-family: Arial, sans-serif; /* A more modern font */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#div_prices_1 label {
+    font-size: 14px; /* Slightly larger label text */
+    color: #333; /* Darker text for better readability */
+    margin-bottom: 5px; /* Space between label and input/textarea */
+    display: block; /* Make labels take their own line */
+}
+
+#div_prices_1 textarea {
+    width: calc(100% - 20px); /* Take full width of the container minus padding */
+    padding: 10px; /* Add some padding inside the textarea */
+    border: 1px solid #ddd; /* A subtle border */
+    border-radius: 5px; /* Rounded corners for the textarea */
+    margin-bottom: 0px; /* Space after the textarea */
+    height: 15px; /* Set a fixed height */
+    resize: vertical; /* Allow only vertical resizing */
+}
+
+#div_prices_1 button {
+    background-color: #005a9c; /* A nice blue */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding inside the button */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Space out the letters a little */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* The pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+#div_prices_1 button:hover {
+    background-color: #003d66; /* Darker blue on hover */
+}
+
+#div_prices_1 input[type="text"] {
+    width: calc(100% - 22px); /* Take full width of the container minus padding and border */
+    padding: 10px; /* Add some padding inside the input */
+    border: 1px solid #ddd; /* A subtle border */
+    border-radius: 5px; /* Rounded corners for the input */
+    margin-bottom: 20px; /* Space after the input */
+}
+
+
+
+#div_prices_2 {
+    margin-top: 20px; /* Add some space between the first and second div */
+    border-radius: 10px;
+
+}
+
+#div_prices_2 table {
+    width: 500px; /* Make the table take the full width of its container */
+    border-collapse: collapse; /* Collapse borders */
+    background-color: #fff; /* White background */
+    margin-top: 20px; /* Space from the content above */
+    margin-right: 30px;
+    margin-left: 30px;
+    
+
+  
+   
+    border-spacing: 0; /* Removes the spacing between cells */
+    border-radius: 15px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensures the content doesn't spill out */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds shadow for depth */
+
+}
+
+#div_prices_2 th, #div_prices_2 td {
+    border: 1px solid #ddd; /* Light grey border */
+    padding: 10px; /* Padding within cells */
+    text-align: left; /* Align text to the left */
+}
+
+#div_prices_2 th {
+    background-color: #f2f2f2; /* Slightly darker background for headers */
+    font-weight: bold; /* Make header text bold */
+}
+
+#div_prices_2 td {
+    background-color: #ffffff; /* White background for cells */
+}
+
+#div_prices_2 tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light grey background for even rows */
+}
+
+#div_prices_2 tr:hover {
+    background-color: #f1f1f1; /* Slightly darker grey on hover for rows */
+}
 .headline_4{
     color: #333333;
     text-align: center;
     font-size: 2rem;
     
 }
-
 
 /*END of div class container directly under PRICES */
 #navbar{
@@ -130,18 +231,35 @@ nav ul li a:hover {
 }
 
 
+
 #highlight {
     margin-top: -10px;
     margin-bottom: 10px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.9rem;
     color: #333333;
     font-family: 'Montserrat', sans-serif;
     color: #FFEB3B;
+}
+
+#highlight a {
+    text-decoration: none;
+    color: #FFEB3B;
+}
+#highlight a:hover{
+    text-decoration: none;
+    color: #FFEB3B;
+    animation-name: heartBeat;/* Use any Animate.css animation name here */
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+
+#higlight:hover {
     animation-name: heartBeat;/* Use any Animate.css animation name here */
     animation-duration: 1s;
     animation-fill-mode: both;
-    animation-delay: 0.5s;
+    animation-delay: 0s;
 }
 
 #highlight_1{
@@ -339,25 +457,35 @@ address a:hover {
 @media screen and (max-width: 800px) {
 
     /*Beggening of div class container directly under PRICES */
-#div_prices {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: #007BFF;
-    padding: 30px 0px;
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0px;
-    max-width: 1200px;
-    width:90%;
-}
+    #div_prices {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        padding: 15px 0px; /* Reduced padding */
+        margin-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0px;
+        max-width: 1200px;
+        width: 90%;
+        border: 1px solid #007BFF;
+        background-color: #cce7fe;
+        color: black;
+    }
+    
+    #div_prices_2 table {
+        width: 350px;
+    }
 
-
-
-
+    #div_prices_1 {
+        width: 300px;
+        margin: auto;
+    }
+    #highlight{
+    font-size: 2rem;
+    }
 
 /*END of div class container directly under PRICES */
 
@@ -381,15 +509,15 @@ address a:hover {
     align-items: center; /* Centers items vertically */
     gap: 15px; /* Adds space between image and text */
     margin: 0 auto; /* Centers the container horizontally */
-    overflow: auto;
+    justify-content: flex-start; /* Aligns items to the start of the container */
+    width: fit-content;
     }
     
-    #cleaning_lady_picture{
+    #cleaning_lady_picture {
     height: auto; /* Maintains the aspect ratio */
-    margin-left: 0px;
-    transform: scale(1.6);
+    margin-left: -30px;
+    transform: scale(1.1);
     margin-top: 0px;
-    flex-grow: 1;
     }
 
     #services {
@@ -426,6 +554,7 @@ address a:hover {
     .picture_text_1{
         flex-grow: 2;
         font-size: 1rem;
+        margin-right: 10px;
     }
     .contact-container {
         flex-direction: column;
