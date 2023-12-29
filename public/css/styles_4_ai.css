@@ -383,12 +383,12 @@ img {
     justify-content: flex-start; /* Aligns items to the start of the container */
 }
 
-.contact-form {
+#emailForm {
     width: 50%;
     max-width: 500px;
 }
 
-.contact-form input, .contact-form textarea {
+#emailForm input, #emailForm textarea {
     width: 400px;
     padding: 10px;
     margin-bottom: 20px;
