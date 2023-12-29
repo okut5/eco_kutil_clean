@@ -97,7 +97,7 @@
     <section id="contact">
         <h2 class="headline_3">Kontaktujte nás</h2>
         <div class="contact-container">
-            <form action="/sendEmail" method="post" class="contact-form" id="form_id">
+            <form action="/sendEmail" method="post" class="contact-form" id="emailForm">
 
                 <input id="nameId" type="text" name="name" placeholder="Jméno" required>
                 <input id="emailId" type="email" name="email"  placeholder="E-mail" required>
@@ -173,7 +173,7 @@
         });
 
         // Listener for Price Calculation
-        document.getElementById('form_id').addEventListener('submit', function(event) {
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Always prevent default for this form as it's for calculation, not submission.
         
             calculateComplexOperation(); // Call the function to calculate and display the result
