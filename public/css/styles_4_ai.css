@@ -383,18 +383,17 @@ img {
     justify-content: flex-start; /* Aligns items to the start of the container */
 }
 
-#emailForm {
+.contact-form {
     width: 50%;
     max-width: 500px;
 }
 
-#emailForm input, #emailForm textarea {
+.contact-form input, .contact-form textarea {
     width: 400px;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #007BFF;
     border-radius: 5px;
-
 }
 
 .contact-form button {
