@@ -171,16 +171,14 @@
         }
         });
 
-       
-        document.getElementById('form_id').onsubmit = function(event) {
-            event.preventDefault(); // Prevent the default form submission behavior
-
-             calculateComplexOperation(); // Call the function to calculate and display the result
-
-             document.getElementById('messageArea').style.display = 'block'; // Show the message
+        
+        document.getElementById('form_id').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            calculateComplexOperation(); // Call the function to calculate and display the result
+            document.getElementById('messageArea').style.display = 'block'; // Show the message
 
             // Add any additional code for form submission, like AJAX requests, here
-        };
+        });
 
             function calculateComplexOperation() {
             var number = document.getElementById("numberInput").value;
