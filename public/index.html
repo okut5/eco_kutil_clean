@@ -39,7 +39,7 @@
             <textarea placeholder="číslo" id="numberInput"></textarea>
             <br><br>
 
-            <button onclick="calculateComplexOperation()">Vypočítat</button>
+            <button onclick="calculateComplexOperation()" type="button">Vypočítat</button>
             <br><br>
         
             <label for="result">Přibližný odhat ceny:</label>
@@ -97,7 +97,8 @@
     <section id="contact">
         <h2 class="headline_3">Kontaktujte nás</h2>
         <div class="contact-container">
-            <form action="http://localhost:3000/sendEmail" method="post" class="contact-form" id="form_id">
+            <form action="/sendEmail" method="post" class="contact-form" id="form_id">
+
                 <input id="nameId" type="text" name="name" placeholder="Jméno" required>
                 <input id="emailId" type="email" name="email"  placeholder="E-mail" required>
                 <textarea id="messageId" name="message" placeholder="Vaše zpráva"></textarea>
