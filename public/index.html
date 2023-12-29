@@ -161,39 +161,35 @@
         </footer>
     
     <script>
-
+        // Listener for Email Submission
         document.querySelector('.contact-form').addEventListener('submit', function(event) {
             const name = document.querySelector('input[name="name"]').value;
             const email = document.querySelector('input[name="email"]').value;
             if (name === '' || email === '') {
-            event.preventDefault();
-            alert('Name and email are required!');
-        }
+                event.preventDefault(); // Prevent form submission if fields are empty
+               alert('Name and email are required!');
+            } // No else needed here; if the form is valid, it will submit naturally.
         });
 
-        
+        // Listener for Price Calculation
         document.getElementById('form_id').addEventListener('submit', function(event) {
-            event.preventDefault(); 
+            event.preventDefault(); // Always prevent default for this form as it's for calculation, not submission.
+        
             calculateComplexOperation(); // Call the function to calculate and display the result
-            document.getElementById('messageArea').style.display = 'block'; // Show the message
-
-            // Add any additional code for form submission, like AJAX requests, here
         });
 
-            function calculateComplexOperation() {
+        function calculateComplexOperation() {
             var number = document.getElementById("numberInput").value;
             number = parseFloat(number); // Make sure to parse the input as a number
-
-            if (!isNaN(number)) { // Check if the input is a valid number
-            var multiplied = number * 3;
-            var result = multiplied + (multiplied * 2.5); // performing (x*3)+((x*3)*2.5)
-            document.getElementById("result").value = result;
+        
+            if (!isNaN(number)) {
+                var multiplied = number * 3;
+                var result = multiplied + (multiplied * 2.5); // performing (x*3)+((x*3)*2.5)
+                document.getElementById("result").value = result;
             } else {
-            alert("Prosím vložte číselnou hodnotu!"); // Alert or handle invalid input
+                alert("Prosím vložte číselnou hodnotu!"); // Alert or handle invalid input
             }
-            }
-
-
+        }
 
 
 
