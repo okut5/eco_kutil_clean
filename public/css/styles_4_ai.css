@@ -81,6 +81,8 @@ body {
   
 }
 
+
+
 #div_prices_1 {
     max-width: 400px; /* Set max width for the container */
     margin: auto; /* Center the container */
@@ -91,6 +93,7 @@ body {
     font-family: Arial, sans-serif; /* A more modern font */
     margin-left: 20px;
     margin-right: 20px;
+    max-width: 80%;
 }
 
 #div_prices_1 label {
@@ -149,10 +152,6 @@ body {
     margin-top: 20px; /* Space from the content above */
     margin-right: 30px;
     margin-left: 30px;
-    
-
-  
-   
     border-spacing: 0; /* Removes the spacing between cells */
     border-radius: 15px; /* Rounded corners for the table */
     overflow: hidden; /* Ensures the content doesn't spill out */
@@ -600,21 +599,27 @@ address a:hover {
 
     .container h1 {
         font-size: 2rem;
-        
 
-      }
+    }
       
     .container h2 {
         font-size: 1rem;
-    
-        
 
-      }
+    }
 
-      .container {
+    .container {
         margin-top: 0px;
         text-align: center;
     
-      }
+    }
+
+    #div_prices_2 table {
+        
+        margin-top: 20px; /* Space from the content above */
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+    
+    }
 
 }
