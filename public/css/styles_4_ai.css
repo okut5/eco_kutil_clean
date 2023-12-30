@@ -34,7 +34,7 @@ body {
     height: fit-content;
     width: auto;
     background-color: #ffffff;
-    margin-top: -110px;
+    margin-top: -100px;
 
   }
   
@@ -600,35 +600,21 @@ address a:hover {
 
     .container h1 {
         font-size: 2rem;
-        color: #000080;
-        font-family: 'Montserrat', sans-serif;
-        margin-bottom: 0;
-        margin-top: 0px;
-        animation-name: zoomInDown; /* Use any Animate.css animation name here */
-        animation-duration: 1s;
-        animation-delay: 0s;;
+        
+
       }
-    
+      
     .container h2 {
         font-size: 1rem;
-        color: #000080;
-        font-family: 'Montserrat', sans-serif;
-        margin-top: 10px;
-        animation-name: zoomInDown; /* Use any Animate.css animation name here */
-        animation-duration: 1s;
-        animation-delay: 0.5s;
+    
+        
+
       }
 
       .container {
-        display: flex;
-        flex-direction: column; /* Align children vertically */
-        align-items: center; /* Horizontal center alignment for children */
-        justify-content: top; /* Vertical center alignment for children */
-        height: fit-content;
-        width: auto;
-        margin-top: -70px;
-        background-color: #ffffff;
+        margin-top: 0px;
+        text-align: center;
     
       }
+
 }
-    
