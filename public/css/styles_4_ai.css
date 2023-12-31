@@ -84,7 +84,6 @@ body {
 
 
 #div_prices_1 {
-    max-width: 400px; /* Set max width for the container */
     margin: auto; /* Center the container */
     padding: 20px; /* Add some padding around the inside of the container */
     background-color: #f9f9f9; /* Light grey background */
@@ -176,7 +175,7 @@ body {
 
 #div_prices_2 tr:nth-child(even) {
     background-color: #f9f9f9; /* Light grey background for even rows */
-}
+}headline_4
 
 #div_prices_2 tr:hover {
     background-color: #f1f1f1; /* Slightly darker grey on hover for rows */
@@ -185,6 +184,7 @@ body {
     color: #333333;
     text-align: center;
     font-size: 2rem;
+    padding-top: 100px;
     
 }
 
@@ -621,5 +621,17 @@ address a:hover {
         max-width: 90%;
     
     }
+
+    .headline_4{
+       padding-top: 50px;
+    }
+}
+
+
+@media screen and (min-width: 1800px) {
+    .container {
+        margin-top: -300px;
+    
+      }
 
 }
