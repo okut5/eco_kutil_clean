@@ -397,7 +397,7 @@ img {
 .contact-form button {
     width: 425px;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: #005a9c;
     color: white;
     border: none;
     border-radius: 5px;
@@ -406,7 +406,7 @@ img {
 }
 
 .contact-form button:hover {
-    background-color: #0056b3;
+    background-color: #003d66;
 }
 
 .contact-info {
@@ -587,7 +587,6 @@ address a:hover {
     .contact-form button {
         width: 325px;
         padding: 10px;
-        background-color: #007BFF;
         color: white;
         border: none;
         border-radius: 5px;
