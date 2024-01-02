@@ -18,7 +18,7 @@
     width: 350px;
     padding: 10px 20px;
     font-size: 1.2rem;
-    background-color: #007BFF;
+    background-color: #005a9c;
     cursor: pointer;
     transition: background-color 0.3s;
   }
@@ -27,7 +27,7 @@
   }
 
   .home-button:hover {
-    background-color: #0056b3;
+    background-color: #003d66;
   }
 
   @media screen and (max-width: 1000px) {
@@ -46,7 +46,7 @@
       width: 600px;
       padding: 10px 20px;
       font-size: 2rem;
-      background-color: #007BFF;
+      background-color: #005a9c;
       cursor: pointer;
       transition: background-color 0.3s;
     }
@@ -55,6 +55,6 @@
     }
   
     .home-button:hover {
-      background-color: #0056b3;
+      background-color: #003d66;
     }
   }
