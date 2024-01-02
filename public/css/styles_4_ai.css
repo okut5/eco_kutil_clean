@@ -190,7 +190,7 @@ body {
 
 /*END of div class container directly under PRICES */
 #navbar{
-    background-color: #007BFF;
+    background-color: #005a9c;
     color: white;
     padding: 35px 0;
     text-align: center;
@@ -222,7 +222,7 @@ nav ul li a:hover {
     text-decoration: underline;
     font-weight: 700;
     text-underline-offset: 10px;
-    color:#FFEB3B;
+    color: #cce7fe;
 }
 
 .picture_text_1 ul li {
@@ -236,18 +236,17 @@ nav ul li a:hover {
     margin-bottom: 10px;
     text-align: center;
     font-size: 2.9rem;
-    color: #333333;
     font-family: 'Montserrat', sans-serif;
-    color: #FFEB3B;
+    color: #ffffff;
 }
 
 #highlight a {
     text-decoration: none;
-    color: #FFEB3B;
+    color: #ffffff;
 }
 #highlight a:hover{
     text-decoration: none;
-    color: #FFEB3B;
+    color: #cce7fe;
     animation-name: heartBeat;/* Use any Animate.css animation name here */
     animation-duration: 1s;
     animation-delay: 0s;
@@ -429,7 +428,7 @@ address {
     margin-top: -5px;
     padding-top: 15px;
     text-align: center;
-    background-color: #007BFF;
+    background-color: #005a9c;
     color: white;
 }
 
