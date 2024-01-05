@@ -42,8 +42,11 @@
             <button id="calculatePriceBtn" type="button">Vypočítat</button>
             <br><br>
         
-            <label for="result">Přibližný odhat ceny:</label>
+            <label for="result">Přibližný odhad ceny za jeden úklid:</label>
             <input type="text" id="result" placeholder="cena v kč" readonly>
+
+            <label for="result_per_month">Přibližný odhad ceny za měsíc:</label>
+            <input type="text" id="result_per_month" placeholder="cena v kč" readonly>
         
             
             
@@ -62,9 +65,6 @@
                   <td>Cena za 1 hodinu</td>
                   <td>150 Kč</td>
                 </tr>
-                <tr>
-                  <td>Odhad rychlosti - kolik metrů za hodinu </td>
-                  <td>20 m²/ hodinu</td>
               </table>
         </div>
     </div>
@@ -174,18 +174,35 @@
     });
 
          // Function for Price Calculation
+    // Function for Price Calculation
+        // Function for Price Calculation
     function calculateComplexOperation() {
         var number = document.getElementById("numberInput").value;
         number = parseFloat(number); // Make sure to parse the input as a number
-    
+
         if (!isNaN(number)) {
             var multiplied = number * 3;
-            var result = multiplied + (multiplied * 2.5); // performing (x*3)+((x*3)*2.5)
-            document.getElementById("result").value = result;
+            var result = multiplied + (number/200 * 150); // performing (x*3)+((x*3)*2.5)
+        
+            // Format the result with spaces and no decimals
+            var formatter = new Intl.NumberFormat('cs-CZ', {
+                style: 'decimal',
+                maximumFractionDigits: 0,
+                useGrouping: true,
+                grouping: [3],
+                currencyDisplay: 'symbol'
+            });
+            var formattedResult = formatter.format(result) + " Kč";
+            var formattedResultPerMonth = formatter.format(result * 21.5) + " Kč"; // Calculate and format the monthly price so times 2
+
+            document.getElementById("result").value = formattedResult; // Updates the result with formatted number
+            document.getElementById("result_per_month").value = formattedResultPerMonth; // Updates the monthly result with formatted number
         } else {
             alert("Prosím vložte číselnou hodnotu!"); // Alert or handle invalid input
         }
     }
+
+
 
         // Attach Price Calculation to button explicitly, not form submission
         document.querySelector('#calculatePriceBtn').addEventListener('click', calculateComplexOperation);
