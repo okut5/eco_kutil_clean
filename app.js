@@ -2,6 +2,14 @@ const express = require('express');
 const app = express();
 const nodemailer = require('nodemailer');
 
+app.use((req, res, next) => {
+    if (req.headers['x-forwarded-proto'] && req.headers['x-forwarded-proto'] === "http") {
+        return res.redirect(301, 'https://' + req.headers.host + req.url);
+    } else {
+        return next();
+    }
+});
+
 // Middleware to parse request body
 app.use(express.urlencoded({ extended: true }));
 // Serve static files from 'public' directory
