@@ -1,6 +1,6 @@
 describe('Email Sent Test and price calculation test ', () => { 
   beforeEach(() => {
-    cy.visit('https://eco-kutil-clean-try1-6be92d72c6d5.herokuapp.com');
+    cy.visit('http://www.kvalitni-uklidy-praha.cz');
   })
 
   it('sends an email and displays confirmation', () => {
